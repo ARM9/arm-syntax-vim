@@ -10,8 +10,6 @@ endif
 
 syn case ignore
 
-so <sfile>:p:h/include/arm_base_syntax.vim
-
 if version >= 508 || !exists("did_armv5_syntax_inits")
   if version < 508
     let did_armv5_syntax_inits = 1
@@ -19,6 +17,9 @@ if version >= 508 || !exists("did_armv5_syntax_inits")
   else
     command -nargs=+ HiLink hi def link <args>
   endif
+
+  so <sfile>:p:h/include/arm_base_syntax.vim
+
   HiLink armv4Instr         armInstructions
   HiLink armv5InstrCond     armInstructions
   HiLink armv5InstrNoCond   armInstructions

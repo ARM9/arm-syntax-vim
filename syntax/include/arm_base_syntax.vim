@@ -56,18 +56,19 @@ exec 'syn match armv4SWP    "SWP' . armCond . 'B\?\>"'
 "
 " ARMv5 instructions
 "
+syn match armv5InstrCond
 exec 'syn match armv5InstrCond "\%(BLX\|CLZ\|MCRR\|MRRC\|QADD\|QSUB\|QDADD\|QDSUB\)' . armCond . '\>"'
-syn match armv4InstrCond armv5InstrCond
+HiLink armv4InstrCond armv5InstrCond
 
 syn match armv5InstrNoCond "\%(BKPT\|CDP2\|LDC2\|MCR2\|MRC2\|PLD\|STC2\)\>"
-syn match armv4InstrNoCond armv5InstrNoCond
+HiLink armv4InstrNoCond armv5InstrNoCond
 
 exec 'syn match armv5Mul "\%(SMLA\|SMLAL\|SMLAW\|SMUL\|SMULW\)[BT][BT]' . armCond . '\>"'
 
 exec 'syn match armv5LDR    "\%(LDR\)' . armCond . 'D\>"'
 exec 'syn match armv5STR    "\%(STR\)' . armCond . 'D\>"'
-syn match armv4LDR  armv5LDR
-syn match armv4STR  armv5STR
+HiLink armv4LDR  armv5LDR
+HiLink armv4STR  armv5STR
 
 "syn match armRelative      "@R[0-7]\|@a\s*+\s*dptr\|@[ab]"
 
