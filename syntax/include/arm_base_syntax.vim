@@ -28,8 +28,8 @@ syn match armIdentifier "\<\h\w*\>"
 syn match armLabel      "\<\h\w*:"
 syn match armCPreProc   "#\h\w*\>"
 
-so <sfile>:p:h/include/gas_directives.vim
-so <sfile>:p:h/include/arm_directives.vim
+so <sfile>:p:h/gas_directives.vim
+so <sfile>:p:h/arm_directives.vim
 
 " Registers
 syn keyword armRegister R0 R1 R2 R3 R4 R5 R6 R7 R8
