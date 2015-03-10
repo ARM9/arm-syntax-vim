@@ -20,13 +20,13 @@ if version >= 508 || !exists("did_armv4_syntax_inits")
 
   so <sfile>:p:h/include/arm_base_syntax.vim
 
-  HiLink armv4Instr          armInstructions
-  HiLink armv4InstrCond      armInstructions
-  HiLink armv4InstrNoCond    armInstructions
-  HiLink armv4LDR            armInstructions
-  HiLink armv4STR            armInstructions
-  HiLink armv4Stack          armInstructions
-  HiLink armv4SWP            armInstructions
+  HiLink armv4Instr          armv4Instructions
+  HiLink armv4InstrCond      armv4Instructions
+  HiLink armv4InstrNoCond    armv4Instructions
+  HiLink armv4LDR            armv4Instructions
+  HiLink armv4STR            armv4Instructions
+  HiLink armv4Stack          armv4Instructions
+  HiLink armv4SWP            armv4Instructions
 
   HiLink armNumericOp        armOperator
   HiLink armRelative         armOperator
@@ -44,7 +44,7 @@ if version >= 508 || !exists("did_armv4_syntax_inits")
   HiLink armCPreProc     Identifier
 
   HiLink armRegister     Type
-  HiLink armInstructions Function
+  HiLink armv4Instructions Function
 
   HiLink armTodo         Todo
   delcommand HiLink

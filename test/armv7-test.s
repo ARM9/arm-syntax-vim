@@ -6,4 +6,4 @@ eor r4,r5
 mla r5,R6
 mov R6,R7
 
-@ vim:ft=armv5
+@ vim:ft=armv7
