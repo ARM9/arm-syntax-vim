@@ -33,21 +33,21 @@ if version >= 508 || !exists("did_armv5_syntax_inits")
   HiLink armRelative        armOperator
 
   " Link to standard syn groups so the 'colorschemes' work
-  HiLink armOperator     Operator
-  HiLink armNumber       Number
-  HiLink armComment      Comment
-  HiLink armString       String
+  HiLink armOperator        Operator
+  HiLink armNumber          Number
+  HiLink armComment         Comment
+  HiLink armString          String
 
-  HiLink armIdentifier   Label
-  HiLink armLabel        Label
-  HiLink gasDirective    PreProc
-  HiLink armDirective    PreProc
-  HiLink armCPreProc     Identifier
+  HiLink armIdentifier      Label
+  HiLink armLabel           Label
+  HiLink gasDirective       PreProc
+  HiLink armDirective       PreProc
+  HiLink armCPreProc        Identifier
 
-  HiLink armRegister     Type
-  HiLink armv5Instructions Function
+  HiLink armRegister        Type
+  HiLink armv5Instructions  Function
 
-  HiLink armTodo         Todo
+  HiLink armTodo            Todo
   delcommand HiLink
 endif
 

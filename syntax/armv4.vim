@@ -20,33 +20,33 @@ if version >= 508 || !exists("did_armv4_syntax_inits")
 
   so <sfile>:p:h/include/arm_base_syntax.vim
 
-  HiLink armv4Instr          armv4Instructions
-  HiLink armv4InstrCond      armv4Instructions
-  HiLink armv4InstrNoCond    armv4Instructions
-  HiLink armv4LDR            armv4Instructions
-  HiLink armv4STR            armv4Instructions
-  HiLink armv4Stack          armv4Instructions
-  HiLink armv4SWP            armv4Instructions
+  HiLink armv4Instr         armv4Instructions
+  HiLink armv4InstrCond     armv4Instructions
+  HiLink armv4InstrNoCond   armv4Instructions
+  HiLink armv4LDR           armv4Instructions
+  HiLink armv4STR           armv4Instructions
+  HiLink armv4Stack         armv4Instructions
+  HiLink armv4SWP           armv4Instructions
 
-  HiLink armNumericOp        armOperator
-  HiLink armRelative         armOperator
+  HiLink armNumericOp       armOperator
+  HiLink armRelative        armOperator
 
   " Link to standard syn groups so the 'colorschemes' work
-  HiLink armOperator     Operator
-  HiLink armNumber       Number
-  HiLink armComment      Comment
-  HiLink armString       String
+  HiLink armOperator        Operator
+  HiLink armNumber          Number
+  HiLink armComment         Comment
+  HiLink armString          String
 
-  HiLink armIdentifier   Label
-  HiLink armLabel        Label
-  HiLink gasDirective    PreProc
-  HiLink armDirective    PreProc
-  HiLink armCPreProc     Identifier
+  HiLink armIdentifier      Label
+  HiLink armLabel           Label
+  HiLink gasDirective       PreProc
+  HiLink armDirective       PreProc
+  HiLink armCPreProc        Identifier
 
-  HiLink armRegister     Type
-  HiLink armv4Instructions Function
+  HiLink armRegister        Type
+  HiLink armv4Instructions  Function
 
-  HiLink armTodo         Todo
+  HiLink armTodo            Todo
   delcommand HiLink
 endif
 
