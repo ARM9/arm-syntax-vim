@@ -87,7 +87,6 @@ HiLink armv4STR  armv5STR
 "
 " VFP/NEON
 "
-exec 'syn match armVfp "\%(\)' . armCond . '\>"'
 
 "syn match armRelative      "@R[0-7]\|@a\s*+\s*dptr\|@[ab]"
 
