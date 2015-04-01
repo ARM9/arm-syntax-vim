@@ -35,7 +35,7 @@ exec 'syn match armv7Instr "\%(DBG\|DMB\|DSB\|ISB\|SEV\|WFE\|WFI\|YIELD\)' . arm
 "
 " VFP/NEON
 "
-exec 'syn match armVfp "\%(\)' . armCond . '\>"'
+exec 'syn match armVfpInstr "\%(VMUL\|VNMUL\|VMLA\|VMLS\|VNMLS\|VNMLA\|VADD\|VSUB\|VDIV\|VABS\|VNEG\|VSQRT\|VCMPE\?\|VCVT[TB]\?\|VMOV\|VMSR\|VMRS\|VSTR\|VSTM\%(DB\|IA\|EA\|FD\)\?\|VPUSH\|VLDR\|VLDM\%(DB\|IA\|EA\|FD\)\?\|VPOP\)' . armCond . '\>"'
 
 syn match armVfp 
 

@@ -18,7 +18,7 @@ if version >= 508 || !exists("did_armv6_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  so <sfile>:p:h/include/arm_base_syntax.vim
+  so <sfile>:p:h/include/armv6_base_syntax.vim
 
   HiLink armv4Instr         armv6Instructions
   HiLink armv4Stack         armv6Instructions
@@ -37,6 +37,7 @@ if version >= 508 || !exists("did_armv6_syntax_inits")
   HiLink armv6STR           armv6Instructions
   
   HiLink armv7Instr         armv6Instructions
+  HiLink armVfpInstr        armv6Instructions
 
   HiLink armNumericOp       armOperator
   HiLink armRelative        armOperator
