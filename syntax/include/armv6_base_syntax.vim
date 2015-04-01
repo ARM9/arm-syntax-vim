@@ -28,7 +28,7 @@ exec 'syn match armv6Mul "\%(UMAAL\|SMUAD\|SMLAD\|SMLALD\|SMUSD\|SMLSD\|SMLSLD\|
 exec 'syn match armv6LDR "\%(LDREX[HBD]\)' . armCond . '\>"'
 exec 'syn match armv6STR "\%(STREX[HBD]\|CLREX\)' . armCond . '\>"'
 
-syn match armv6InstrNoCond "\%(IT\|CBN\?Z\|TBB\|TBH\|CPSID\|CPSIE\|CPS\|SETEND\|SRS\%(IA\|IB\|DA\|DB\)\|RFE\%(IA\|IB\|DA\|DB\)\)"
+syn match armv6InstrNoCond "\%(IT\|CBN\?Z\|TBB\|TBH\|CPSID\|CPSIE\|CPS\|SETEND\|SRS\%(IA\|IB\|DA\|DB\)\|RFE\%(IA\|IB\|DA\|DB\)\)\>"
 
 exec 'syn match armv7Instr "\%(DBG\|DMB\|DSB\|ISB\|SEV\|WFE\|WFI\|YIELD\)' . armCond . '\>"'
 
