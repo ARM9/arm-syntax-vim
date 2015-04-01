@@ -55,6 +55,7 @@ if version >= 508 || !exists("did_armv6_syntax_inits")
   HiLink armCPreProc        Identifier
 
   HiLink armRegister        Type
+  HiLink armv6Register      Type
   HiLink armv6Instructions  Function
 
   HiLink armTodo            Todo
