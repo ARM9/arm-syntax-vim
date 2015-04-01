@@ -33,7 +33,7 @@ so <sfile>:p:h/arm_directives.vim
 
 " Registers
 syn keyword armRegister R0 R1 R2 R3 R4 R5 R6 R7 R8
-syn keyword armRegister R9 R10 R11 R12 R13 R14 R15 SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
+syn keyword armRegister R9 R10 R11 R12 R13 R14 R15 FP SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
 syn keyword armRegister A1 A2 A3 A4 V1 V2 V3 V4 V5 V6 V7 V8
 
 " VFP/NEON registers
