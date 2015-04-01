@@ -11,10 +11,10 @@ git clone https://github.com/ARM9/arm-syntax-vim.git
 ### Using
 In your .vimrc:
 ```
-au BufNewFile,BufRead *.s,*.S set filetype=armv7
+au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 ```
 and/or put this line near the top or bottom of your assembly file(s):
 ```
-@ vim:ft=armv6
+@ vim:ft=armv5
 ```
 
