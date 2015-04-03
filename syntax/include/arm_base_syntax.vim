@@ -46,29 +46,12 @@ exec 'syn match armv4Instr "\%(ADC\|ADD\|AND\|BIC\|EOR\|MLA\|MOV\|MUL\|MVN\|NEG\
 
 exec 'syn match armv4InstrCond  "\%(B\|BL\|BX\|CDP\|CMN\|CMP\|LDC\|MCR\|MRC\|MRS\|MSR\|STC\|SWI\|TEQ\|TST\)' . armCond . '\>"'
 
-syn match armv4InstrNoCond      "\%(ASR\|LSL\|LSR\|NOP\|POP\|PUSH\|ROR\|RRX\)\>"
+syn match armv4InstrNoCond  "\%(ASR\|LSL\|LSR\|NOP\|POP\|PUSH\|ROR\|RRX\)\>"
 
 exec 'syn match armv4LDR    "\%(LDR\)' . armCond . '\%(B\?T\?\|H\|S[BH]\)\?\>"'
 exec 'syn match armv4STR    "\%(STR\)' . armCond . '\%(B\?T\?\|H\)\?\>"'
 exec 'syn match armv4Stack  "\%(LDM\|STM\)' . armCond . '\%([ID][BA]\|[EF][DA]\)\>"'
 exec 'syn match armv4SWP    "SWP' . armCond . 'B\?\>"'
-
-"
-" ARMv5 instructions
-"
-
-exec 'syn match armv5InstrCond "\%(BLX\|CLZ\|MCRR\|MRRC\|QADD\|QSUB\|QDADD\|QDSUB\)' . armCond . '\>"'
-HiLink armv4InstrCond armv5InstrCond
-
-syn match armv5InstrNoCond "\%(BKPT\|CDP2\|LDC2\|MCR2\|MRC2\|PLD\|STC2\)\>"
-HiLink armv4InstrNoCond armv5InstrNoCond
-
-exec 'syn match armv5Mul "\%(SMLA\|SMLAL\|SMLAW\|SMUL\|SMULW\)[BT][BT]' . armCond . '\>"'
-
-exec 'syn match armv5LDR    "\%(LDR\)' . armCond . 'D\>"'
-exec 'syn match armv5STR    "\%(STR\)' . armCond . 'D\>"'
-HiLink armv4LDR  armv5LDR
-HiLink armv4STR  armv5STR
 
 "syn match armRelative      "@R[0-7]\|@a\s*+\s*dptr\|@[ab]"
 

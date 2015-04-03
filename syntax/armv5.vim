@@ -18,7 +18,7 @@ if version >= 508 || !exists("did_armv5_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  so <sfile>:p:h/include/arm_base_syntax.vim
+  so <sfile>:p:h/include/armv5_base_syntax.vim
 
   HiLink armv4Instr         armv5Instructions
   HiLink armv5InstrCond     armv5Instructions
