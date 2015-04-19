@@ -11,7 +11,7 @@ HiLink armv4InstrCond armv5InstrCond
 syn match armv5InstrNoCond "\%(BKPT\|CDP2\|LDC2\|MCR2\|MRC2\|PLD\|STC2\)\>"
 HiLink armv4InstrNoCond armv5InstrNoCond
 
-exec 'syn match armv5Mul "\%(SMLA\|SMLAL\|SMLAW\|SMUL\|SMULW\)[BT][BT]' . armCond . '\>"'
+exec 'syn match armv5Mul "\%(SMLA\|SMLAL\|SMLAW\|SMUL\|SMULW\)[BT][BT]\?' . armCond . '\>"'
 
 exec 'syn match armv5LDR    "\%(LDR\)' . armCond . 'D\>"'
 exec 'syn match armv5STR    "\%(STR\)' . armCond . 'D\>"'
