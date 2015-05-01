@@ -7,4 +7,11 @@ mla r5,R6
 mov R6,R7
 
 FSHTOS
+
+fmuls
+fcmps
+FCMPEs
+fcmpezs
+fcmpzs
+
 @ vim:ft=arm

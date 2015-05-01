@@ -36,7 +36,7 @@ exec 'syn match armv7Instr "\%(DBG\|DMB\|DSB\|ISB\|SEV\|WFE\|WFI\|YIELD\)' . arm
 " VFP/NEON
 "
 
-exec 'syn match armVfpInstr "\%(FMUL\|FNMUL\|FMAC\|FNMAC\|FMSC\|FNMSC\|FADD\|FSUB\|FDIV\|FCPY\|FABS\|FNEG\|FSQRT\|FCMPE\?\|FCMPE\?Z\|FCVTD\|FCVTS\|FUITO\|FSITO\|FTOUIZ\?\|FTOSIZ\?\|FST\|FLD\|FTO\%(SH\|SL\|UH\|UL\)\|F\%(SH\|SL\|UH\|UL\)TO\)[SD]' . armCond . '\>"'
+exec 'syn match armVfpInstr "\%(FMUL\|FNMUL\|FMAC\|FNMAC\|FMSC\|FNMSC\|FADD\|FSUB\|FDIV\|FCPY\|FABS\|FNEG\|FSQRT\|FCMPE\?Z\?\|FCMPZ\|FCVTD\|FCVTS\|FUITO\|FSITO\|FTOUIZ\?\|FTOSIZ\?\|FST\|FLD\|FTO\%(SH\|SL\|UH\|UL\)\|F\%(SH\|SL\|UH\|UL\)TO\)[SD]' . armCond . '\>"'
 
 exec 'syn match armVfpInstr "\%(FMSR\|FMRS\|FMDLR\|FMRDL\|FMDHR\|FMRDH\|FMXR\|FMRX\|FMSTAT\|FCONST\)' . armCond . '\>"'
 
