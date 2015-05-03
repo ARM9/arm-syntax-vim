@@ -17,5 +17,6 @@ fdivs
 
 vmul
 vdiv
+vsqrt
 
 @ vim:ft=arm
