@@ -13,5 +13,9 @@ fcmps
 FCMPEs
 fcmpezs
 fcmpzs
+fdivs
+
+vmul
+vdiv
 
 @ vim:ft=arm
