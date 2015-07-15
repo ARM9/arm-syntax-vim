@@ -1,3 +1,12 @@
+
+foo:
+_bar:
+.car:
+.L1:
+.L09:
+.1337f:
+ab.b: b blabl
+
 adc r0, r1
 add R1, R2
 0:
@@ -25,7 +34,7 @@ fdivs
 vdiv
 vsqrt
 
-.float 3.14159
+.float .01, 3.14159
 
 @ illegal
 blx 0002f
