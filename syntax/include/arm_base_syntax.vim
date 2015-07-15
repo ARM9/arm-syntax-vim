@@ -5,12 +5,10 @@ syn match armNumericOp  "[+-/*%<>=&|^!]"
 
 " hex
 syn match armNumber     "[#\$]\?0x\x\+\>"
-syn match armNumber     "[#\$]\?\d\x*h\>"
 " dec
 syn match armNumber     "[#\$]\?\d\+\>"
 " bin
 syn match armNumber     "[#\$]\?0b[01]\+\>"
-syn match armNumber     "[#\$]\?[01]\+b\>"
 " floats
 syn match armNumber     "\d*\.\d\+\>"
 
@@ -26,16 +24,17 @@ syn region armString    start="'" skip=+\\'+ end="'\|$"
 " Assembler identifiers/labels/directives
 syn match armIdentifier "\<\h\w*\>"
 syn match armLabel      "\<\h\w*:"
-syn match armLabel	"\<\d\{1,3\}[:fb]"
-syn match armCPreProc   "^\s*#\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
+syn match armLabel	"\<\d\{1,3\}[:fb]\>"
+syn match armCPreProc   "^\s*#\s*\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
 
 so <sfile>:p:h/gas_directives.vim
 so <sfile>:p:h/arm_directives.vim
 
 " Registers
-syn keyword armRegister R0 R1 R2 R3 R4 R5 R6 R7 R8
-syn keyword armRegister R9 R10 R11 R12 R13 R14 R15 FP SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
-syn keyword armRegister A1 A2 A3 A4 V1 V2 V3 V4 V5 V6 V7 V8
+syn match armRegister "R\%(1[0-5]\|[0-9]\)"
+syn keyword armRegister FP SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
+syn match armRegister "A[1-3]"
+syn match armRegister "V[1-8]"
 
 " Conditional field to avoid repetition
 let armCond = '\%(AL\|CC\|CS\|EQ\|GE\|GT\|HI\|HS\|LE\|LO\|LS\|LT\|MI\|NE\|PL\|VC\|VS\)\?'

@@ -2,14 +2,8 @@
 so <sfile>:p:h/armv5_base_syntax.vim
 
 " VFP/NEON registers
-let i = 0
-while i < 32
-    exe 'syn match armv6Register "S' . i . '\>"'
-    exe 'syn match armv6Register "D' . i . '\>"'
-    let i = i + 1
-endwhile
-
-syn keyword armv6Register Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15
+syn match armv6Register "[SD]\%(3[01]\|[12]\?[0-9]\)"
+syn match armv6Register "Q\%(1[0-5]\|[0-9]\)"
 
 "
 " ARMv6 instructions
