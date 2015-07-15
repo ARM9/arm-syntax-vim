@@ -10,9 +10,9 @@ endif
 
 syn case ignore
 
-if version >= 508 || !exists("did_armv6_syntax_inits")
+if version >= 508 || !exists("did_arm_syntax_inits")
   if version < 508
-    let did_armv6_syntax_inits = 1
+    let did_arm_syntax_inits = 1
     command -nargs=+ HiLink hi link <args>
   else
     command -nargs=+ HiLink hi def link <args>

@@ -26,8 +26,8 @@ syn region armString    start="'" skip=+\\'+ end="'\|$"
 " Assembler identifiers/labels/directives
 syn match armIdentifier "\<\h\w*\>"
 syn match armLabel      "\<\h\w*:"
-syn match armLabel	"\d\{1,2\}[:fb]"
-syn match armCPreProc   "#\h\w*\>"
+syn match armLabel	"\<\d\{1,3\}[:fb]"
+syn match armCPreProc   "^\s*#\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
 
 so <sfile>:p:h/gas_directives.vim
 so <sfile>:p:h/arm_directives.vim

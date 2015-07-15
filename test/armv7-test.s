@@ -15,7 +15,7 @@ fcmpezs
 fcmpzs
 fdivs
 
-vmul
+vmul Q15, Q16, d31, s31, s32, d32
 vdiv
 vsqrt
 
