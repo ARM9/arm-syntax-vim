@@ -17,7 +17,7 @@ syn match armNumber     "[#\$]\?0b[01]\+\>"
 syn match armNumber     "\d*\.\d\+\>"
 
 " Comments
-syn region armComment   start="//\|@\|#" end="$" contains=armTodo
+syn region armComment   start="//\|@" end="$" contains=armTodo
 " syn region armComment   start="^#\|//\|@" end="$" contains=armTodo
 syn region armComment   start="/\*"   end="\*/" contains=armTodo
 
