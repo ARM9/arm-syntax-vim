@@ -17,6 +17,7 @@ syn keyword armDirective    .qn
 syn keyword armDirective    .setfp
 syn keyword armDirective    .secrel32
 syn keyword armDirective    .syntax
+syn keyword armDirective    .thumb
 syn keyword armDirective    .thumb_func
 syn keyword armDirective    .thumb_set
 syn keyword armDirective    .tlsdescseq
