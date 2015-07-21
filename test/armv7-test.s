@@ -34,6 +34,9 @@ fdivs
 vdiv
 vsqrt
 
+vadd.i8 d12, d16, d31
+vmull.s32 q2, d5, D6
+
 .float .01, 3.14159
 
 @ illegal
