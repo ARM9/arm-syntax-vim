@@ -33,6 +33,8 @@ so <sfile>:p:h/arm_directives.vim
 
 " Registers
 syn match armRegister "R\%(1[0-5]\|[0-9]\)"
+syn match armRegister "C\%(1[0-5]\|[0-9]\)"
+syn match armRegister "P\%(1[0-5]\|[0-9]\)"
 syn keyword armRegister FP SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
 syn match armRegister "A[1-3]"
 syn match armRegister "V[1-8]"
