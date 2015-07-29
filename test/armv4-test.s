@@ -8,11 +8,13 @@
 
 adc r1, r15, R14
 add A1, v1, V8
+adrcc r8, 0b
 sub r5, #0xFeeDB4c
 smull r0, r1,R2
 smull r0, r1,R2
 
 @ illegal
+adrgts
 blx 0002f
 smlalBt r1,r15
 SMLawTb V8, v3

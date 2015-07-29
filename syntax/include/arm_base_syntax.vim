@@ -45,11 +45,9 @@ let armCond = '\%(AL\|CC\|CS\|EQ\|GE\|GT\|HI\|HS\|LE\|LO\|LS\|LT\|MI\|NE\|PL\|VC
 "
 " ARMv4 and thumb instructions
 " 
-exec 'syn match armv4Instr "\%(ADC\|ADD\|AND\|BIC\|EOR\|MLA\|MOV\|MUL\|MVN\|NEG\|ORR\|RSB\|RSC\|SBC\|SMLAL\|SMULL\|SUB\|UMLAL\|UMULL\)' . armCond . 'S\?\>"'
+exec 'syn match armv4Instr "\%(ADC\|ADD\|AND\|ASR\|BIC\|EOR\|LSL\|LSR\|MLA\|MOV\|MUL\|MVN\|NEG\|ORR\|ROR\|RRX\|RSB\|RSC\|SBC\|SMLAL\|SMULL\|SUB\|UMLAL\|UMULL\)' . armCond . 'S\?\>"'
 
-exec 'syn match armv4InstrCond  "\%(B\|BL\|BX\|CDP\|CMN\|CMP\|LDC\|MCR\|MRC\|MRS\|MSR\|STC\|SWI\|TEQ\|TST\)' . armCond . '\>"'
-
-syn match armv4InstrNoCond  "\%(ASR\|LSL\|LSR\|NOP\|POP\|PUSH\|ROR\|RRX\)\>"
+exec 'syn match armv4InstrCond  "\%(ADR\|B\|BL\|BX\|CDP\|CMN\|CMP\|LDC\|MCR\|MRC\|MRS\|MSR\|NOP\|POP\|PUSH\|STC\|SWI\|TEQ\|TST\)' . armCond . '\>"'
 
 exec 'syn match armv4LDR    "\%(LDR\)' . armCond . '\%(B\?T\?\|H\|S[BH]\)\?\>"'
 exec 'syn match armv4STR    "\%(STR\)' . armCond . '\%(B\?T\?\|H\)\?\>"'
