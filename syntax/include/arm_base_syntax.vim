@@ -25,11 +25,10 @@ syn region armComment   start="/\*"   end="\*/" contains=armTodo
 syn region armString    start="\"" skip=+\\"+ end="\"\|$"
 syn region armString    start="'" skip=+\\'+ end="'\|$"
 
-" local labels
-syn match armCPreProc   "^\s*#\s*\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
-
 so <sfile>:p:h/gas_directives.vim
 so <sfile>:p:h/arm_directives.vim
+
+syn match armCPreProc   "^\s*#\s*\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
 
 " Registers
 syn match armRegister "R\%(1[0-5]\|[0-9]\)"
@@ -47,7 +46,9 @@ let armCond = '\%(AL\|CC\|CS\|EQ\|GE\|GT\|HI\|HS\|LE\|LO\|LS\|LT\|MI\|NE\|PL\|VC
 " 
 exec 'syn match armv4Instr "\%(ADC\|ADD\|AND\|ASR\|BIC\|EOR\|LSL\|LSR\|MLA\|MOV\|MUL\|MVN\|NEG\|ORR\|ROR\|RRX\|RSB\|RSC\|SBC\|SMLAL\|SMULL\|SUB\|UMLAL\|UMULL\)' . armCond . 'S\?\>"'
 
-exec 'syn match armv4InstrCond  "\%(ADR\|B\|BL\|BX\|CDP\|CMN\|CMP\|LDC\|MCR\|MRC\|MRS\|MSR\|NOP\|POP\|PUSH\|STC\|SWI\|TEQ\|TST\)' . armCond . '\>"'
+exec 'syn match armv4InstrCond  "\%(B\|BL\|BX\|CDP\|CMN\|CMP\|LDC\|MCR\|MRC\|MRS\|MSR\|NOP\|POP\|PUSH\|STC\|SWI\|TEQ\|TST\)' . armCond . '\>"'
+
+exec 'syn match armv4InstrCond  "ADR' . armCond . 'L\?\>"'
 
 exec 'syn match armv4LDR    "\%(LDR\)' . armCond . '\%(B\?T\?\|H\|S[BH]\)\?\>"'
 exec 'syn match armv4STR    "\%(STR\)' . armCond . '\%(B\?T\?\|H\)\?\>"'
