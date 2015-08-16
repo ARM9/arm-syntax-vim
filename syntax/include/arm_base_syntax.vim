@@ -14,7 +14,7 @@ syn match armNumber     "[#\$]\?\d\+\>"
 " bin
 syn match armNumber     "[#\$]\?0b[01]\+\>"
 " floats
-syn match armNumber     "\d*\.\d\+\>"
+syn match armNumber     "\%(\d\+\.\d*\|\d*\.\d\+\)\%([eE]\?[-+]\?\d\+\)\?\>"
 
 " Comments
 syn region armComment   start="//\|@" end="$" contains=armTodo
