@@ -7,14 +7,14 @@ syn match armNumericOp  "[+-/*%<>=&|^!]"
 syn match armIdentifier "\<[.\$_A-Za-z0-9]\+\>"
 syn match armLabel      "\<[.\$_A-Za-z0-9]\+:"
 
-" hex
-syn match armNumber     "[#\$]\?0x\x\+\>"
 " dec
-syn match armNumber     "[#\$]\?\d\+\>"
+syn match armNumber     "[#\$]\?\d\+"
+" hex
+syn match armNumber     "[#\$]\?0x\x\+"
 " bin
-syn match armNumber     "[#\$]\?0b[01]\+\>"
+syn match armNumber     "[#\$]\?0b[01]\+"
 " floats
-syn match armNumber     "\%(\d\+\.\d*\|\d*\.\d\+\)\%([eE]\?[-+]\?\d\+\)\?\>"
+syn match armNumber     "\%(\d\+\.\d*\|\d*\.\d\+\)\%([eE]\?[-+]\?\d\+\)\?"
 
 " Comments
 syn region armComment   start="//\|@" end="$" contains=armTodo

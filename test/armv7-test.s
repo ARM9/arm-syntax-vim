@@ -10,7 +10,9 @@ ab.b: b blabl
 adc r0, r1
 add R1, R2
 0:
-sub r14, 0b1110110
+sub r14, 0b1110110-50
+0x1234567890AbCdEfG
+0xfff-0b1101+0xebbe&40%76*(0x0f)0b11/0x1f[0b110]42<>0xff|0xaa.c
 1:
 and R2,r3
 bic  r3 , r4
@@ -18,9 +20,11 @@ eor r4,r5
 mla r5,R6
 mov R6,R7
 b 001b
+blx 0002f
 
 push {r0, r1, r2-r9}
 pop {r1-r14}
+push {q0-q14}
 
 FSHTOS
 
@@ -40,10 +44,8 @@ vmull.s32 q2, d5, D6
 .float .01, 3.14159
 
 @ illegal
-blx 0002f
 1.0f 0.f .1f
 vmul Q15, Q16, d31, s31, s32, d32
 vmull q01, q09, q14, q16
-push {q0-q14}
 pop {s3-s32}
 @ vim:ft=arm
