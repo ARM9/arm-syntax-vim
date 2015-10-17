@@ -21,10 +21,11 @@ mla r5,R6
 mov R6,R7
 b 001b
 blx 0002f
-
+add r14,#4
+sub r13,#0x28
 push {r0, r1, r2-r9}
 pop {r1-r14}
-push {q0-q14}
+vpush {q0-q14}
 
 FSHTOS
 
@@ -38,14 +39,18 @@ fdivs
 vdiv
 vsqrt
 
+s30doesd32
+
 vadd.i8 d12, d16, d31
 vmull.s32 q2, d5, D6
 
 .float .01, 3.14159
-
+{14,140-402(0x1b-0b1101+.0#0.0#.0.[123]0xffff%#0x34%$0xf$#0b111#$0b11b{ldr#0b11-ldr1)}
 @ illegal
 1.0f 0.f .1f
 vmul Q15, Q16, d31, s31, s32, d32
 vmull q01, q09, q14, q16
 pop {s3-s32}
+
+vadd#1234?ldr$12?str12
 @ vim:ft=arm

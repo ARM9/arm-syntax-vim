@@ -10,13 +10,13 @@ syn match armIdentifier "\<[.\$_A-Za-z0-9]\+\>"
 syn match armLabel      "\<[.\$_A-Za-z0-9]\+:"
 
 " dec
-syn match armNumber     "[#\$]\?\d\+"
+syn match armNumber     "[#\$]\?\d\+\>"
 " hex
-syn match armNumber     "[#\$]\?0x\x\+"
+syn match armNumber     "[#\$]\?0x\x\+\>"
 " bin
-syn match armNumber     "[#\$]\?0b[01]\+"
+syn match armNumber     "[#\$]\?0b[01]\+\>"
 " floats
-syn match armNumber     "\%(\d\+\.\d*\|\d*\.\d\+\)\%([eE]\?[-+]\?\d\+\)\?"
+syn match armNumber     "\%(\d\+\.\d*\|\d*\.\d\+\)\%([eE]\?[-+]\?\d\+\)\?\>"
 
 " Comments
 syn region armComment   start="//\|@" end="$" contains=armTodo
@@ -33,12 +33,12 @@ so <sfile>:p:h/arm_directives.vim
 syn match armCPreProc   "^\s*#\s*\(include\|define\|undef\|if\|ifdef\|ifndef\|elif\|else\|endif\|error\|pragma\)\>"
 
 " Registers
-syn match armRegister "R\%(1[0-5]\|[0-9]\)"
-syn match armRegister "C\%(1[0-5]\|[0-9]\)"
-syn match armRegister "P\%(1[0-5]\|[0-9]\)"
+syn match armRegister "\<R\%(1[0-5]\|[0-9]\)\>"
+syn match armRegister "\<C\%(1[0-5]\|[0-9]\)\>"
+syn match armRegister "\<P\%(1[0-5]\|[0-9]\)\>"
 syn keyword armRegister FP SP LR PC SPSR CPSR CPSR_c CPSR_cxsf BP
-syn match armRegister "A[1-3]"
-syn match armRegister "V[1-8]"
+syn match armRegister "\<A[1-3]\>"
+syn match armRegister "\<V[1-8]\>"
 
 " Conditional field to avoid repetition
 let armCond = '\%(AL\|CC\|CS\|EQ\|GE\|GT\|HI\|HS\|LE\|LO\|LS\|LT\|MI\|NE\|PL\|VC\|VS\)\?'
