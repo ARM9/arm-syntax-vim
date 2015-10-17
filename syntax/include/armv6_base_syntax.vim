@@ -3,7 +3,7 @@ so <sfile>:p:h/armv5_base_syntax.vim
 
 " VFP/NEON registers
 syn match armv6Register "[SD]\%(3[01]\|[12]\?[0-9]\)\>"
-syn match armv6Register "Q\%(1[0-5]\|[0-9]\)"
+syn match armv6Register "Q\%(1[0-5]\|[0-9]\)\>"
 
 "
 " ARMv6 instructions
