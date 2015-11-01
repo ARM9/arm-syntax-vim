@@ -14,6 +14,7 @@ sub r14, 0b1110110-50
 0x1234567890AbCdEfG
 0xfff-0b1101+0xebbe&40%76*(0x0f)0b11/0x1f[0b110]42<>0xff|0xaa.c
 1:
+movwcs r1,r7
 and R2,r3
 bic  r3 , r4
 eor r4,r5
@@ -38,6 +39,20 @@ fdivs
 
 vdiv
 vsqrt
+
+it
+itt
+ittt
+itttt
+ittttt
+ite
+itet
+iteet
+iteeee
+ite
+itee
+ittee
+iteeet
 
 s30doesd32
 
