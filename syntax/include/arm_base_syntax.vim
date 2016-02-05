@@ -23,9 +23,10 @@ syn region armComment   start="//\|@" end="$" contains=armTodo
 " syn region armComment   start="^#\|//\|@" end="$" contains=armTodo
 syn region armComment   start="/\*"   end="\*/" contains=armTodo
 
-" Strings
-syn region armString    start="\"" skip=+\\"+ end="\"\|$"
-syn region armString    start="'" skip=+\\'+ end="'\|$"
+" String literal
+syn region armString    start="\"" skip=+\\"+ end="\"\|[^\\]$"
+" Ascii character literal
+syn match armString     "'\\\?[\d32-~]'\?"
 
 so <sfile>:p:h/gas_directives.vim
 so <sfile>:p:h/arm_directives.vim
