@@ -66,7 +66,7 @@ syn keyword gasDirective    .handlerdata
 syn keyword gasDirective    .hidden
 syn keyword gasDirective    .hword
 syn keyword gasDirective    .ident
-syn match gasDirective      "\.if\%(def\|b\|c\|eq\|eqs\|ge\|gt\|le\|lt\|nb\|nc\|ndef\|notdef\|ne\|nes\)\?"
+syn match gasDirective      "\.if\%(def\|b\|c\|eq\|eqs\|ge\|gt\|le\|lt\|nb\|nc\|ndef\|notdef\|nes\|ne\)\?"
 syn keyword gasDirective    .incbin
 syn keyword gasDirective    .include
 syn match gasDirective      "\.inst\%(\.[nw]\)\?"

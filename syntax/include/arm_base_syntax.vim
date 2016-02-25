@@ -24,7 +24,7 @@ syn region armComment   start="//\|@" end="$" contains=armTodo
 syn region armComment   start="/\*"   end="\*/" contains=armTodo
 
 " String literal
-syn region armString    start="\"" skip=+\\"+ end="\"\|[^\\]$"
+syn region armString    start=/"/ skip=/\\"/ end=/"/
 " Ascii character literal
 syn match armString     "'\\\?[\d32-~]'\?"
 
