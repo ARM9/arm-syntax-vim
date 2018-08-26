@@ -1,5 +1,5 @@
 
-setlocal iskeyword  +=.,_
+setlocal iskeyword  +=.,_,\$
 
 syn keyword armTodo     contained todo fixme danger note notice bug author date
 
